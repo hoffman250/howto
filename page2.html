@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="main.css">
+
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+		<script>
+			function initMap() {
+		        var map = new google.maps.Map(document.getElementById("googleMap1"), {
+		        center: {lat: 44.050, lng: -121.300},
+		        zoom:7,
+		        mapTypeId:google.maps.MapTypeId.ROADMAP
+		        });
+		      }
+		      google.maps.event.addDomListener(window, 'load', initMap);
+		</script>
+	</head>
+
+	<body>
+		<div class="nav">
+			<ul class="inner">
+				<li><a href="page1.html">Intro</a></li>
+				<li><a href="page2.html">Basic Map</a></li>
+				<li><a href="page3.html">API Key?</a></li>
+				<li><a href="page4.html">User Input</a></li>
+				<li><a href="page5.html">Mark and Zoom</a></li>
+			</ul>
+		</div>
+
+		<div class="header">
+			<h1>Basic Map</h1>
+			<h2>Getting a basic map up and running</h2>
+		</div>
+
+		<div class="main_content">
+			<p>
+				Getting started with embedding a basic map with fixed latitude and longitude coordinates is almost straight forward. Google provides a javascript example that allows the programmer to drop in some code into their html doc and have a map centered on their lat/long coordinates embedded on their webpage. 
+			</p>
+			<p>
+				Google provides a code example similar to the code below. 
+			</P>
+			<div class="code">
+				function initMap() {
+		        	var map = new google.maps.Map(document.getElementById("googleMap1"), {
+		        	center: {lat: 44.050, lng: -121.300},
+		        	zoom:7,
+		        	mapTypeId:google.maps.MapTypeId.ROADMAP
+		        	});
+		      	}
+			</div>
+			<p>
+				Unfortunately, I could not get the above code to work as is. After doing some research on the internet, I found a code example here:
+			</p>
+				<a href="http://www.w3schools.com/googleapi/google_maps_basic.asp">w3schools Basic Map Example</a>
+			<p>
+				That added this line of code:
+			</p>
+			<div class="code">
+				google.maps.event.addDomListener(window, 'load', initMap);
+			</div>
+
+			<p>
+				This code runs the function "initMap" once the DOM is loaded. Without this line of code, apparently initMap() would never run. As shown below, a basic google map now loads up fine, with this code added. In this example, I have the map defaulting to center on Bend, Oregon, my hometown.
+			</p>
+
+			<div id="googleMap1" style="width:500px;height:380px;"></div>
+			<br></br>
+			<p>
+				Some might be wondering about an API key - we'll discuss that next.
+			</P>
+		</div>
+
+		<div class="footer">
+			<ul class="inner">
+				<li><a href="page1.html">Previous</a></li>
+				<li><a href="page3.html">Next</a></li>
+			</ul>
+		</div>
+
+	</body>
+</html>

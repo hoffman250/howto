@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="main.css">
+
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+		<script>
+			function initMap() {
+		        var map = new google.maps.Map(document.getElementById("googleMap1"), {
+		        center: {lat: 44.050, lng: -121.300},
+		        zoom:7,
+		        mapTypeId:google.maps.MapTypeId.ROADMAP
+		        });
+		      }
+		      google.maps.event.addDomListener(window, 'load', initMap);
+		</script>
+	</head>
+
+	<body>
+		<div class="nav">
+			<ul class="inner">
+				<li><a href="page1.html">Intro</a></li>
+				<li><a href="page2.html">Basic Map</a></li>
+				<li><a href="page3.html">API Key?</a></li>
+				<li><a href="page4.html">User Input</a></li>
+				<li><a href="page5.html">Mark and Zoom</a></li>
+			</ul>
+		</div>
+
+		<div class="header">
+			<h1>API Key?</h1>
+			<h2>Basic Maps Require No API Key</h2>
+		</div>
+
+		<div class="main_content">
+			<p>
+				What Google does not come right and tell you is that you can use their API without getting an API key. Apparently so long as you are not a heavy user of the API, Google permits a limited number of interactions with the API per day. This is great news for somebody like me that wants to go learn how to interact with this API without going through the hassle of signing up for an API key and then worrying about security of said key.
+			</p>
+			<p>
+				For professionals that have higher volume interactions with Google Maps, they can get a key right from the Google Developers Console. Instructions for getting an API key can be found here:
+			</p>
+			<a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Maps Javascript API</a>
+
+			<p>
+				With the standard key, Google permits up to 25,000 map loads per day for free. Beyond that, they start billing.
+			</p>
+			<p>
+				Next we'll take a look at setting up the Javascript so that a user can enter some coordinates for the map, rather than have the map come up at a fixed position.
+			</P>
+		</div>
+
+		<div class="footer">
+			<ul class="inner">
+				<li><a href="page2.html">Previous</a></li>
+				<li><a href="page4.html">Next</a></li>
+			</ul>
+		</div>
+
+	</body>
+</html>

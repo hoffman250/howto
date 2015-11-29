@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      //var map;
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+        center:new google.maps.LatLng(44.050,-121.300),
+        zoom:7,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+        });
+        //google.maps.event.addDomListener(window, 'load', initialize);
+      }
+      google.maps.event.addDomListener(window, 'load', initMap);
+/*
+      function initialize() {
+        var mapProp1 = {
+          center:new google.maps.LatLng(44.050,-121.300),
+          zoom:7,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var mapProp2 = {
+          center:new google.maps.LatLng(52.5167,13.3833),
+          zoom:7,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map1=new google.maps.Map(document.getElementById("googleMap1"),mapProp1);
+        var map2=new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);*/
+    </script>
+  </head>
+
+  <body>
+    <h1>This sucks</h1>
+    <div class="main_content">
+      <p>
+        Getting started with embedding a basic map with fixed latitude and longitude coordinates is pretty straight forward. Google provides good code examples that allow a novice to get something working fairly quickly. What Google does not come right and tell you is that you can use their API without getting an API key. Apparently so long as you are not a heavy user of the API, Google permits ...
+      </P>
+      <div id="map" style="width:500px;height:380px;"></div>
+    </div>
+  </body>
+</html>
